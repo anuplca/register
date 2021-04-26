@@ -1,2 +1,2 @@
-# registerPage
+# register
 Register
