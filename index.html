@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+        <!--== Google Font ==-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+        <!--== Custom Style ==-->
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --montserrat-font: "Montserrat", sans-serif;
+                --accent-color: #006287;
+            }
+
+            body {
+                font-family: var(--montserrat-font);
+                font-size: 16px;
+                line-height: 1.3;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100vh;
+                padding: 0 15px;
+                margin: 0;
+            }
+            /*== Register-box Start ==*/
+            .register-box {
+                position: relative;
+                width: 60%;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+                padding: 0;
+                margin: 0 auto;
+                border-radius: 5px;
+                overflow: hidden;
+                border: 1px solid var(--accent-color);
+            }
+
+            .register-box .logo-block {
+                padding: 22px 0;
+                background-color: var(--accent-color);
+                text-align: center;
+            }
+
+            .register-box .logo-block img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .register-box .row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .register-box .row .left-side {
+                position: relative;
+                width: 50%;
+                padding: 18px 32px;
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .register-box .row .left-side .user-box {
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+
+            .register-box .row .left-side .user {
+                --circle: 75px;
+                width: var(--circle);
+                height: var(--circle);
+                border-radius: 50%;
+                margin: 0 auto;
+                box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid var(--accent-color);
+            }
+            .register-box .row .left-side .user img{
+            	max-width: 100%;
+            }
+            .register-box .row .left-side .user::after {
+                content: "";
+                position: absolute;
+                bottom: -18px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 2px;
+                background-color: var(--accent-color);
+            }
+
+            .register-box .row .left-side .user-box .user-name h2 {
+                font-family: var(--montserrat-font);
+                font-size: 22px;
+                line-height: 1.3;
+                font-weight: 600;
+                color: #000;
+                margin-top: 30px;
+            }
+
+            .register-box .row .left-side .user-box .user-name h2 span {
+                color: var(--accent-color);
+            }
+
+            .register-box .row .left-side .user-box p {
+                font-family: var(--montserrat-font);
+                font-size: 15px;
+                line-height: 1.5;
+                font-weight: 400;
+                font-style: italic;
+                margin-top: 8px;
+                color: #000;
+            }
+
+            .register-box .row .left-side form .input-group {
+                margin: 25px 0 0 0;
+            }
+
+            .register-box .row .left-side form .input-group label {
+                font-family: var(--montserrat-font);
+                font-size: 17px;
+                line-height: 1.5;
+                font-weight: 500;
+                display: block;
+                margin-bottom: 6px;
+            }
+
+            .register-box .row .left-side form .input-group input.form-control {
+                font-family: var(--montserrat-font);
+                font-size: 15px;
+                line-height: 1.3;
+                font-weight: 500;
+                display: block;
+                width: 100%;
+                padding: 12px;
+                border-radius: 5px;
+                border: 1px solid var(--accent-color);
+                outline: none;
+                color: var(--accent-color);
+            }
+            .register-box .row .left-side form .input-group input:placeholder {
+                color: #000;
+            }
+
+            .register-box .row .left-side ul li {
+                font-family: var(--montserrat-font);
+                font-size: 17px;
+                line-height: 1.3;
+                font-weight: 500;
+                list-style-position: inside;
+                color: var(--accent-color);
+                margin: 18px 0;
+            }
+
+            .register-box .row .left-side form button {
+                font-family: var(--montserrat-font);
+                font-size: 15px;
+                line-height: 1.3;
+                font-weight: 500;
+                width: 100%;
+                border-radius: 5px;
+                display: block;
+                background-color: var(--accent-color);
+                color: #fff;
+                border: none;
+                padding: 12px;
+                cursor: pointer;
+            }
+
+            .register-box .row .left-side p {
+                font-family: var(--montserrat-font);
+                font-size: 15px;
+                line-height: 1.3;
+                font-weight: 500;
+                list-style-position: inside;
+                color: #000;
+                margin: 15px 0 0 0;
+                text-align: center;
+            }
+
+            .register-box .row .right-side {
+                position: relative;
+                width: 50%;
+            }
+
+            .register-box .row .right-side img {
+                width: 100%;
+                height: auto;
+            }
+            /*@media screen Start*/
+            @media screen and (max-width: 992px) {
+                body {
+                    height: 100%;
+                }
+                .register-box {
+                    border: none;
+                    box-shadow: none;
+                }
+                .register-box .row {
+                    flex-direction: column;
+                }
+
+                .register-box .row .right-side {
+                    margin-top: 30px;
+                }
+
+                .register-box .row .left-side,
+                .register-box .row .right-side {
+                    width: 100%;
+                    border: 1px solid var(--accent-color);
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+                }
+
+                .register-box .row .left-side {
+                    border-radius: 0 0 5px 5px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .register-box {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width: 426px) {
+                .register-box .logo-block {
+                    padding: 15px 0;
+                }
+                .register-box .row .left-side p {
+                    font-size: 14px;
+                }
+
+                .register-box .row .left-side {
+                    padding: 18px 20px;
+                }
+            }
+            /*@media screen End*/
+
+            /*== Register-box Start ==*/
+        </style>
+    </head>
+    <body>
+        <!-- Register-box Start -->
+        <div class="register-box">
+            <div class="logo-block">
+                <a href="#"><img src="logo.png" alt="site-logo" /></a>
+            </div>
+            <div class="row">
+                <div class="col left-side">
+                    <div class="user-box">
+                        <div class="user">
+                        	<img src="user-icon.png" alt="user-icon" />
+                            <i class="bx bxs-user-circle"></i>
+                        </div>
+                        <div class="user-name">
+                            <h2>Welcome <span>John Doe</span></h2>
+                        </div>
+                        <p>Thank you for registering with us. Your login credentials are given below:</p>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <label for="email">Email :</label>
+                            <input type="text" id="email" class="form-control" placeholder="johndoe@gmail.com" disabled />
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password :</label>
+                            <input type="text" id="password" class="form-control" placeholder="***********" disabled />
+                        </div>
+                        <ul>
+                            <li>And Train You for Future</li>
+                        </ul>
+                        <button class="btn">SHOW INTEREST</button>
+                        <p>We Believe in getting ahead of time</p>
+                    </form>
+                </div>
+                <div class="col right-side">
+                    <div class="img-block">
+                        <img src="courses-img.png" alt="courses-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Register-box End -->
+    </body>
+</html>
